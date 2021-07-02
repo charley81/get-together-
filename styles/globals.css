@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --color-light: #ffffff;
+  --color-dark: #2c3e50;
+  --color-primary: #2ecc71;
+  --color-secondary: #3498db;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +21,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #e74c3c;
+  color: var(--color-secondary);
 }
 
 p {
@@ -27,8 +34,8 @@ h1 {
 
 .btn {
   display: inline-block;
-  background: #3498db;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-dark);
   padding: 10px 20px;
   cursor: pointer;
   border: 0;
@@ -42,8 +49,8 @@ h1 {
 .btn-secondary {
   font: inherit;
   font-size: 13px;
-  background: #000;
-  color: #fff !important;
+  background: var(--color-dark);
+  color: var(--color-light) !important;
   border: 0;
   border-radius: 5px;
   padding: 5px 15px;
