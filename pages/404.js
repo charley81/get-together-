@@ -1,5 +1,5 @@
-import Layout from '../components/layout'
-import styles from '../styles/404.module.css'
+import Layout from '@/components/layout'
+import styles from '@/styles/404.module.css'
 import Link from 'next/link'
 import { FaExclamationCircle } from 'react-icons/fa'
 
