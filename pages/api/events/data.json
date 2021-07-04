@@ -1,0 +1,92 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "St. Patty's @ Patty's",
+      "familyName": "Smith",
+      "slug": "st-pattys-at-pattys",
+      "address": "111 West St, New York (NY), 10222",
+      "date": "March 17, 2022",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Christmas Extravaganza",
+      "familyName": "Jones",
+      "slug": "christmas-extravaganza",
+      "address": "100 West St, New York (NY), 10222",
+      "date": "Dec 21, 2021",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Fireworks On The 4th",
+      "familyName": "Zorn",
+      "slug": "fireworks-on-the-fourth",
+      "address": "38 West St, New York (NY), 10222",
+      "date": "July 04, 2021",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event3.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Bring Your Dish",
+      "familyName": "Smith",
+      "slug": "bring-your-dish",
+      "address": "111 West St, New York (NY), 10222",
+      "date": "Aug 01, 2021",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event4.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Good Times",
+      "familyName": "McCormick",
+      "slug": "good-times",
+      "address": "12 West St, New York (NY), 10222",
+      "date": "Sep 02, 2021",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event5.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Black History Day",
+      "familyName": "Priester",
+      "slug": "black-history-day",
+      "address": "15 West St, New York (NY), 10222",
+      "date": "February 12, 2022",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event6.jpg"
+    },
+    {
+      "id": "7",
+      "title": "It's Hot Lets Swim",
+      "familyName": "rodriquez",
+      "slug": "its-hot-lets-swim",
+      "address": "112 West St, New York (NY), 10222",
+      "date": "July 02, 2021",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event7.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Halloween For Adults",
+      "familyName": "Harley",
+      "slug": "halloween-for-adults",
+      "address": "23 West St, New York (NY), 10222",
+      "date": "Oct 28, 2021",
+      "time": "11:00 AM EST",
+      "description": "I'm baby live-edge yuccie put a bird on it intelligentsia mumblecore, celiac crucifix swag letterpress vegan flexitarian everyday carry heirloom. Keytar man bun single-origin coffee photo booth. Locavore XOXO flexitarian farm-to-table wolf gluten-free synth street art 8-bit shoreditch cornhole hoodie master cleanse blue bottle. Squid selfies poke craft beer, ramps 8-bit twee letterpress PBR&B. Salvia selvage live-edge narwhal lumbersexual kogi iceland.",
+      "image": "/images/sample/event8.jpg"
+    }
+  ]
+}
