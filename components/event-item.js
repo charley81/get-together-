@@ -13,6 +13,19 @@ export default function EventItem({ evt }) {
           alt="event-image"
         />
       </div>
+
+      <div className={styles.info}>
+        <span>
+          {evt.date} at {evt.time}
+        </span>
+        <h3>{evt.title}</h3>
+      </div>
+
+      <div>
+        <Link href={`/events/${evt.slug}`}>
+          <a className="btn">Details</a>
+        </Link>
+      </div>
     </div>
   )
 }
