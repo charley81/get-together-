@@ -1,21 +1,32 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Layout from '../../components/layout'
+import Layout from '@/components/layout.js'
+import Modal from '@/components/modal.js'
+import ImageUpload from '@/components/image-upload.js'
 import { API_URL } from '@/config/index'
 import styles from '@/styles/form.module.css'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import moment from 'moment'
+import Image from 'next/image'
+import { FaImage } from 'react-icons/fa'
 
-export default function AddEventPage() {
+export default function EditEventPage({ evt }) {
   const [values, setValues] = useState({
-    title: '',
-    familyName: '',
-    address: '',
-    date: '',
-    time: '',
-    description: '',
+    title: evt.title,
+    familyName: evt.familyName,
+    address: evt.address,
+    date: evt.date,
+    time: evt.time,
+    description: evt.description,
   })
+
+  const [imagePreview, setImagePreview] = useState(
+    evt.image ? evt.image.formats.thumbnail.url : null
+  )
+
+  const [showModal, setShowModal] = useState(false)
 
   const router = useRouter()
 
@@ -29,8 +40,8 @@ export default function AddEventPage() {
       toast.error('Please fill in all fields')
     }
 
-    const res = await fetch(`${API_URL}/events`, {
-      method: 'POST',
+    const res = await fetch(`${API_URL}/events/${evt.id}`, {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -50,12 +61,19 @@ export default function AddEventPage() {
     setValues({ ...values, [name]: value })
   }
 
+  const imageUploaded = async e => {
+    const res = await fetch(`${API_URL}/events/${evt.id}`)
+    const data = await res.json()
+    setImagePreview(data.image.formats.thumbnail.url)
+    setShowModal(false)
+  }
+
   return (
     <Layout title="Add New Event">
       <Link href="/events">
         <a>Go Back</a>
       </Link>
-      <h1>Add Event</h1>
+      <h1>Edit Event</h1>
       <ToastContainer />
 
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -96,14 +114,14 @@ export default function AddEventPage() {
               type="date"
               id="date"
               name="date"
-              value={values.date}
+              value={moment(values.date).format('yyyy-MM-DD')}
               onChange={handleInputChange}
             />
           </div>
           <div>
-            <label htmlFor="name">Time</label>
+            <label htmlFor="time">Time</label>
             <input
-              type="time"
+              type="text"
               id="time"
               name="time"
               value={values.time}
@@ -124,8 +142,38 @@ export default function AddEventPage() {
           ></textarea>
         </div>
 
-        <input type="submit" value="Add Event" className="btn" />
+        <input type="submit" value="Edit Event" className="btn" />
       </form>
+
+      <h2>Event Image</h2>
+      {imagePreview ? (
+        <Image src={imagePreview} height={100} width={170} alt="Event Image" />
+      ) : (
+        <div>
+          <p>No Image Uploaded</p>
+        </div>
+      )}
+
+      <div>
+        <button onClick={() => setShowModal(true)} className="btn-secondary">
+          <FaImage /> Set Image
+        </button>
+      </div>
+
+      <Modal show={showModal} onClose={() => setShowModal(false)}>
+        <ImageUpload evtId={evt.id} imageUploaded={imageUploaded} />
+      </Modal>
     </Layout>
   )
+}
+
+export async function getServerSideProps({ params: { id } }) {
+  const res = await fetch(`${API_URL}/events/${id}`)
+  const evt = await res.json()
+
+  return {
+    props: {
+      evt,
+    },
+  }
 }
