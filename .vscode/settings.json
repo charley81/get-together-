@@ -4,7 +4,9 @@
     "cloudinary",
     "guiness",
     "pattys",
+    "react",
     "st",
-    "stapi"
+    "stapi",
+    "toastify"
   ]
 }

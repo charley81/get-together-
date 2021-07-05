@@ -12,7 +12,6 @@ export default function EventPage({ evt }) {
   }
 
   const router = useRouter()
-  console.log(router)
   return (
     <Layout>
       <div className={styles.event}>
