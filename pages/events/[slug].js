@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
+import EventMap from '../../components/event-map'
 import { API_URL } from '@/config/index'
 import styles from '@/styles/event.module.css'
 import Link from 'next/link'
@@ -9,37 +10,11 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 export default function EventPage({ evt }) {
-  const deleteEvent = async e => {
-    if (confirm('Are You Sure')) {
-      const res = await fetch(`${API_URL}/events/${evt.id}`, {
-        method: 'DELETE',
-      })
-
-      const data = await res.json()
-
-      if (!res.ok) {
-        toast.error(data.message)
-      } else {
-        router.push('/events')
-      }
-    }
-  }
-
   const router = useRouter()
+
   return (
     <Layout>
       <div className={styles.event}>
-        <div className={styles.controls}>
-          <Link href={`/events/edit/${evt.id}`}>
-            <a>
-              <FaPencilAlt /> Edit Event
-            </a>
-          </Link>
-          <a href="#" className={styles.delete} onClick={deleteEvent}>
-            <FaTimes /> Delete Event
-          </a>
-        </div>
-
         <span>
           {new Date(evt.date).toLocaleDateString('en-US')} at {evt.time}
         </span>
@@ -61,6 +36,8 @@ export default function EventPage({ evt }) {
         <p>{evt.description}</p>
         <h3>Address:</h3>
         <p>{evt.address}</p>
+
+        <EventMap evt={evt} />
 
         <Link href="/events">
           <a>{'<'} Go Back</a>
